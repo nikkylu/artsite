@@ -98,6 +98,7 @@ export const projects: Project[] = [
     ],
   },
 //   {
+
 //     slug: 'water',
 //     title: 'Water',
 //     year: '2024',
