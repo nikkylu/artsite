@@ -1,15 +1,11 @@
 import type { NextConfig } from "next";
-
-const repoName = "artsite";
-const isGitHubPagesBuild =
-  process.env.GITHUB_ACTIONS === "true" ||
-  process.env.GITHUB_PAGES === "true";
+import { basePath, repoName } from "./lib/site";
 
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: isGitHubPagesBuild ? `/${repoName}` : "",
-  assetPrefix: isGitHubPagesBuild ? `/${repoName}/` : undefined,
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
 };
 
 export default nextConfig;

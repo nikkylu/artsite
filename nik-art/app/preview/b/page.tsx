@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { projects } from '@/lib/projects'
+import { withBasePath } from '@/lib/site'
 
 export default function ConceptB() {
   return (
@@ -128,9 +129,9 @@ export default function ConceptB() {
       <div style={{ position: 'fixed', bottom: '1rem', right: '1rem', fontSize: 9,
         color: '#4a4840', background: '#0a0a08', padding: '0.5rem 1rem',
         border: '1px solid rgba(255,255,255,0.08)' }}>
-        <Link href="/preview/a" style={{ color: '#4a4840', textDecoration: 'none' }}>← A</Link>
+        <Link href={withBasePath('/preview/a')} style={{ color: '#4a4840', textDecoration: 'none' }}>← A</Link>
         {' '} CONCEPT B {' '}
-        <Link href="/preview/c" style={{ color: '#c8b87a', textDecoration: 'none' }}>C →</Link>
+        <Link href={withBasePath('/preview/c')} style={{ color: '#c8b87a', textDecoration: 'none' }}>C →</Link>
       </div>
     </div>
   )

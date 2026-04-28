@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import { projects } from '@/lib/projects'
+import { withBasePath } from '@/lib/site'
 
 const floatingLinks = [
   {
     label: 'Work',
-    href: '/#work',
+    href: withBasePath('/#work'),
     style: { left: '14%', top: '28%' },
     drift: { x: [0, 22, -14, 10, -6, 0], y: [0, -18, 14, -10, 8, 0] },
     duration: 17,

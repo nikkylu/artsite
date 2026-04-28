@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { projects } from '@/lib/projects'
+import { withBasePath } from '@/lib/site'
 
 export default function ConceptC() {
   const [hovered, setHovered] = useState<number | null>(null)
@@ -120,7 +121,7 @@ export default function ConceptC() {
       <div style={{ position: 'fixed', bottom: '1rem', right: '1rem', fontSize: 9,
         color: '#4a4840', background: '#0a0a08', padding: '0.5rem 1rem',
         border: '1px solid rgba(255,255,255,0.08)' }}>
-        <a href="/preview/b" style={{ color: '#4a4840', textDecoration: 'none' }}>← B</a>
+        <a href={withBasePath('/preview/b')} style={{ color: '#4a4840', textDecoration: 'none' }}>← B</a>
         {' '} CONCEPT C
       </div>
     </div>
